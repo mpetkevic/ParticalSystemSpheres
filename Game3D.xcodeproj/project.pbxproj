@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD47A7311E9A4604009B688F /* ParticalSpheres.scnp in Resources */ = {isa = PBXBuildFile; fileRef = FD47A72F1E9A4604009B688F /* ParticalSpheres.scnp */; };
+		FD47A7321E9A4604009B688F /* confetti.png in Resources */ = {isa = PBXBuildFile; fileRef = FD47A7301E9A4604009B688F /* confetti.png */; };
+		FD47A7341E9A4AD5009B688F /* earth-topo.png in Resources */ = {isa = PBXBuildFile; fileRef = FD47A7331E9A4AD5009B688F /* earth-topo.png */; };
 		FDEDD2711E9940B5000A5B6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEDD2701E9940B5000A5B6E /* AppDelegate.swift */; };
-		FDEDD2731E9940B5000A5B6E /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = FDEDD2721E9940B5000A5B6E /* art.scnassets */; };
 		FDEDD2751E9940B5000A5B6E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEDD2741E9940B5000A5B6E /* GameViewController.swift */; };
 		FDEDD2781E9940B5000A5B6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDEDD2761E9940B5000A5B6E /* Main.storyboard */; };
 		FDEDD27A1E9940B5000A5B6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDEDD2791E9940B5000A5B6E /* Assets.xcassets */; };
@@ -16,9 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD47A72F1E9A4604009B688F /* ParticalSpheres.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = ParticalSpheres.scnp; sourceTree = "<group>"; };
+		FD47A7301E9A4604009B688F /* confetti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = confetti.png; sourceTree = "<group>"; };
+		FD47A7331E9A4AD5009B688F /* earth-topo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "earth-topo.png"; sourceTree = "<group>"; };
 		FDEDD26D1E9940B5000A5B6E /* Game3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Game3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDEDD2701E9940B5000A5B6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FDEDD2721E9940B5000A5B6E /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		FDEDD2741E9940B5000A5B6E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		FDEDD2771E9940B5000A5B6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FDEDD2791E9940B5000A5B6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,8 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				FDEDD2701E9940B5000A5B6E /* AppDelegate.swift */,
-				FDEDD2721E9940B5000A5B6E /* art.scnassets */,
 				FDEDD2741E9940B5000A5B6E /* GameViewController.swift */,
+				FD47A72F1E9A4604009B688F /* ParticalSpheres.scnp */,
+				FD47A7331E9A4AD5009B688F /* earth-topo.png */,
+				FD47A7301E9A4604009B688F /* confetti.png */,
 				FDEDD2761E9940B5000A5B6E /* Main.storyboard */,
 				FDEDD2791E9940B5000A5B6E /* Assets.xcassets */,
 				FDEDD27B1E9940B5000A5B6E /* LaunchScreen.storyboard */,
@@ -126,9 +132,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDEDD2731E9940B5000A5B6E /* art.scnassets in Resources */,
+				FD47A7341E9A4AD5009B688F /* earth-topo.png in Resources */,
 				FDEDD27D1E9940B5000A5B6E /* LaunchScreen.storyboard in Resources */,
 				FDEDD27A1E9940B5000A5B6E /* Assets.xcassets in Resources */,
+				FD47A7311E9A4604009B688F /* ParticalSpheres.scnp in Resources */,
+				FD47A7321E9A4604009B688F /* confetti.png in Resources */,
 				FDEDD2781E9940B5000A5B6E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +273,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Game3D/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mpetkevic.Game3D;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -277,6 +286,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Game3D/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mpetkevic.Game3D;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -303,6 +313,7 @@
 				FDEDD2831E9940B5000A5B6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
