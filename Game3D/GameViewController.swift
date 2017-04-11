@@ -12,40 +12,37 @@ import SceneKit
 
 class GameViewController: UIViewController {
     
-   
     var scnView: SCNView!
     var scnScene: SCNScene!
     var cameraNode: SCNNode!
     var sphere: SCNNode!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        run()
+    }
+    
+    func run() {
         setupView()
         setupScene()
         createSphere()
         setupCamera()
         setupLight()
- //       createTrail()
-        
-        
+        createParticleSystem()
     }
     
     func setupView(){
         self.view.backgroundColor = UIColor.white
         scnView = self.view as! SCNView
-        
     }
-   
+    
     func setupScene(){
         scnScene = SCNScene()
         scnView.scene = scnScene
         scnView.allowsCameraControl = true
-       // scnView.autoenablesDefaultLighting = true
-        
+        // scnView.autoenablesDefaultLighting = true
     }
-
+    
     func setupCamera(){
         cameraNode = SCNNode()
         cameraNode.camera = SCNCamera()
@@ -61,7 +58,6 @@ class GameViewController: UIViewController {
     
     func createSphere() {
         sphere = SCNNode()
-        
         let sphereGeometry = SCNSphere(radius: 1.5)
         sphere.geometry = sphereGeometry
         
@@ -71,9 +67,8 @@ class GameViewController: UIViewController {
         sphere.position = SCNVector3Make(0, 0, 0)
         scnScene.rootNode.addChildNode(sphere)
     }
-
+    
     func setupLight() {
-        
         // Lightspot from top with shadows
         let light = SCNNode ()
         light.light = SCNLight ()
@@ -93,16 +88,20 @@ class GameViewController: UIViewController {
         scnScene.rootNode.addChildNode(light2)
     }
     
+    
     //Kame problema del funkcijos createTrail, savybes color?, bei kaip panaudoti sukurta sfera is funkcijos createSphere?
     
-//    func createTrail(color: UIColor: , geometry: SCNGeometry) -> SCNParticleSystem {
-//        
-//        let trail = SCNParticleSystem(named: "ParticalSpheres.scnp", inDirectory: nil)!
-//        
-//        trail.particleColor = color
-//        
-//        trail.emitterShape = geometry
-//        
-//        return trail
-//    }
+    func createParticleSystem() {
+        let particlesNode = SCNNode()
+        let trailShape = SCNTube(innerRadius: 1.0, outerRadius: 2.0, height: 5.0)
+        particlesNode.addParticleSystem(createTrail(color: .red, geometry: trailShape))
+        scnScene.rootNode.addChildNode(particlesNode)
+    }
+    
+    func createTrail(color: UIColor, geometry: SCNGeometry) -> SCNParticleSystem {
+        let trail = SCNParticleSystem(named: "ParticalSpheres.scnp", inDirectory: nil)!
+        trail.particleColor = color
+        trail.emitterShape = geometry
+        return trail
+    }
 }
